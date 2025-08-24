@@ -1,0 +1,97 @@
+Product Requirements Document: JS Invaders
+1. Introduction & Vision
+JS Invaders is a classic, 2D fixed-shooter arcade game developed in JavaScript, HTML, and CSS. It's a tribute to the iconic Space Invaders, designed to be a lightweight, fun, and nostalgic browser-based experience. The project's goal is to create a fully functional, polished mini-game that is easy to pick up and play. The primary target audience is casual gamers and fans of retro arcade titles.
+
+2. Core Gameplay & Mechanics
+This section details the fundamental features and rules of the game.
+
+Player Ship
+Movement: The player controls a spaceship at the bottom of the screen. The ship can only move horizontally (left and right).
+
+Controls: Movement is controlled via the left and right arrow keys (ArrowLeft, ArrowRight) or the 'A' and 'D' keys.
+
+Shooting: The player can fire a single projectile upwards. Firing is controlled by the spacebar or the up arrow key (ArrowUp).
+
+Fire Rate: The player can only have one projectile on the screen at a time. A new one can be fired only after the previous one has hit an enemy or gone off-screen.
+
+Lives: The player starts with 3 lives. A life is lost when the player's ship is hit by an enemy projectile or an invader reaches the bottom of the screen.
+
+Invaders (Enemies)
+Formation: Invaders are arranged in a grid formation (e.g., 5 rows of 10 invaders).
+
+Movement: The entire grid of invaders moves horizontally as a single block. When the block reaches the edge of the screen, it drops down one level and reverses its horizontal direction.
+
+Speed: The invaders' movement speed increases as more of them are defeated.
+
+Shooting: Invaders fire projectiles downwards at random intervals. The frequency of their shots can increase as the game progresses.
+
+Scoring & Progression
+Points: Players earn points for destroying invaders. Different types or rows of invaders can be worth different point values (e.g., top row = 30 pts, middle rows = 20 pts, bottom row = 10 pts).
+
+Levels: The game consists of waves or levels. A level is cleared when all invaders are destroyed. The next level begins with a new, slightly faster grid of invaders.
+
+High Score: The game will track and display the player's current score and the all-time high score (using browser local storage).
+
+Win/Loss Conditions
+Game Over: The game ends when the player loses all their lives.
+
+Victory: The player wins the level by destroying all invaders in the wave. The game can continue with progressively harder waves.
+
+3. User Interface (UI) & User Experience (UX)
+The interface should be clean, intuitive, and evocative of classic arcade games.
+
+Start Screen: A simple screen with the game title ("JS Invaders"), a "Start Game" button, and the high score displayed.
+
+In-Game HUD (Heads-Up Display): The HUD will be displayed at the top or bottom of the game screen and will show:
+
+Current Score: The player's running score.
+
+High Score: The highest score achieved.
+
+Lives Remaining: Icons representing the number of lives left (e.g., small ship icons).
+
+Current Level/Wave: The current level number.
+
+Game Over Screen: When the game ends, this screen will display the player's final score and a "Play Again" button to restart the game.
+
+4. Art & Audio
+The assets should be simple, pixel-art style to maintain a retro feel. 🕹️
+
+Art Assets (Sprites)
+Player Ship: A single sprite for the player's cannon/ship.
+
+Invaders: At least 2-3 different, simple alien sprites for visual variety in the formation. Each type should have two frames for a basic animation effect.
+
+Projectiles: One sprite for the player's laser/bullet and one for the enemy's.
+
+Barriers/Bunkers (Optional): Destructible shields above the player that absorb both player and enemy fire.
+
+Explosion: A small animation/sprite for when an invader or the player is destroyed.
+
+Audio Assets (Sound Effects)
+Player Shoot: A "pew" sound for when the player fires.
+
+Invader Hit: A sound for when an invader is destroyed.
+
+Player Hit: A sound for when the player's ship is destroyed.
+
+Background "Music": A simple, repeating four-note loop that speeds up as the invaders' movement speeds up.
+
+5. Technical Requirements
+Platform: Web browser.
+
+Technology Stack:
+
+HTML5: For the basic structure of the game page.
+
+CSS3: For styling the page and UI elements.
+
+JavaScript (ES6+): For all game logic, rendering, and controls.
+
+Rendering: The game will be rendered on the HTML5 <canvas> element.
+
+Compatibility: Must be functional on the latest versions of major desktop browsers (Chrome, Firefox, Safari, Edge).
+
+Performance: The game should run smoothly at a consistent frame rate (e.g., 60 FPS) without noticeable lag or performance issues.
+
+Code: The code should be organized, commented, and contained within a single directory for easy deployment. It should not require any external libraries or frameworks to run.
